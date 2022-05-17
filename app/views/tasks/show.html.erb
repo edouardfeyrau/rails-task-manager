@@ -1,0 +1,8 @@
+<div class="top">
+<h1><%= @task.title  %></h1>
+<%= link_to edit_task_path do%><input type="button" class="btn btn-primary" value="Edit this task"><% end %>
+</div>
+<p class="details"><%= @task.details %></p>
+<p><%= check_box_tag('completion', value = "1",checked = @task.completed) %> This task is <%= @task.completed ? "completed" : "not completed yet" %></p>
+
+<p><%= link_to "Back to list", tasks_path %></p>

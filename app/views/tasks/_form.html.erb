@@ -1,0 +1,16 @@
+<!-- app/views/restaurants/_form.html.erb -->
+<%= form_for(task) do |t| %>
+  <%= t.label :title %>
+  <br>
+  <%= t.text_field :title %>
+  <br>
+  <%= t.label :details %>
+  <br>
+  <%= t.text_field :details %>
+  <br>
+  <%= if task.persisted? %>
+  <%= t.submit 'Update a task'%>
+  <% else %>
+  <%= t.submit 'Create a task'%>
+  <% end %>
+<% end  %>
